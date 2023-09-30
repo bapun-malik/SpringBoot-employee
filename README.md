@@ -39,8 +39,8 @@ Before you begin, ensure you have met the following requirements:
 ```sh
 git clone https://github.com/bapun-malik/SpringBoot-employee.git
 cd SpringBoot-employee
-
-## Database Configuration
+```
+### Database Configuration
 spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/book
