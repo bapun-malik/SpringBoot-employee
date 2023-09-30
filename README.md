@@ -42,10 +42,8 @@ cd SpringBoot-employee
 ```
 ### Database Configuration
 ```sh
-spring:
-    datasource:
-        url: jdbc:postgresql://localhost:5432/book
-        username: bapun
-        password: malik@123
-        driver-class-name: org.postgresql.Driver
+spring.datasource.url: jdbc:postgresql://localhost:5432/book
+spring.datasource.username: bapun
+spring.datasource.password: malik@123
+spring.datasource.driver-class-name: org.postgresql.Driver
 ```
