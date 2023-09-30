@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Employee Table</h3>
+    <div class="container">
+        <table border="2">
+            <thead>
+                <tr>
+                    <td>Serial Number</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    <td>Date of Birth</td>
+                    <td>Driving Licence</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="e:${emp}">
+                    <td th:text="${e.id}"></td>
+                    <td th:text="${e.firstname}"></td>
+                    <td th:text="${e.lastname}"></td>
+                    <td th:text="${e.email}"></td>
+                    <td th:text="${#dates.format(e.dob, 'dd-MM-yyyy')}"></td>
+                    <td th:text="${e.havedl ? 'YES' : 'No'}"></td>
+                    <td>
+                        <div class="table-btn">
+                            <a th:href="@{/update/{id}(id=${e.id})}">
+                                <button class="update-btn">Update</button>
+                            </a>
+                            <a th:href="@{/delete/{id}(id=${e.id})}">
+                                <button class="delete-btn">Delete</button>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btn-container">
+        <a th:href="@{/create}">
+            <button class="create-btn">CREATE</button>
+        </a>
+    </div>
+</body>
+</html>
