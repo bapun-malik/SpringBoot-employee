@@ -41,9 +41,11 @@ git clone https://github.com/bapun-malik/SpringBoot-employee.git
 cd SpringBoot-employee
 ```
 ### Database Configuration
+```sh
 spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/book
         username: bapun
         password: malik@123
         driver-class-name: org.postgresql.Driver
+```
