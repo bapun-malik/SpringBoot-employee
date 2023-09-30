@@ -14,7 +14,7 @@ This is a simple Employee Management System built using Spring Boot. It provides
   - [Clone the Repository](#clone-the-repository)
   - [Build and Run](#build-and-run)
 - [Usage](#usage)
-- [API Endpoints](#api-endpoints)
+- - [API Endpoints](#api-endpoints)
 - [Database Configuration](#database-configuration)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,3 +39,11 @@ Before you begin, ensure you have met the following requirements:
 ```sh
 git clone https://github.com/bapun-malik/SpringBoot-employee.git
 cd SpringBoot-employee
+
+## Database Configuration
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/book
+        username: bapun
+        password: malik@123
+        driver-class-name: org.postgresql.Driver
